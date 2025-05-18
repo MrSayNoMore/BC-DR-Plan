@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Education Solutions - BC/DR Plan</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets\IMAGES\LG.png" alt="Inclusive Digital Education Logo" />
+      <h1>Inclusive Digital Education Solutions</h1>
+    </div>
+    <p class="subtitle">Business Continuity & Disaster Recovery Portal</p>
+  </header>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#executive-summary" class="active">Executive Summary</a></li>
+      <li><a href="#risk-assessment">Risk Assessment</a></li>
+      <li><a href="#recovery-objectives">Recovery Objectives</a></li>
+      <li><a href="#business-impact">Business Impact Analysis</a></li>
+      <li><a href="#disaster-recovery">DR</a></li>
+      <li><a href="#business-continuity">BC</a></li>
+      <li><a href="#test-maintenance">Test & Maintenance</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+
+    <!-- Executive Summary -->
+    <section id="executive-summary" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <h2 class="section-title">Executive Summary</h2>
+      </div>
+      <div class="section-content">
+        <p class="summary-intro">
+          This Business Continuity/Disaster Recovery Plan provides a strategic framework to ensure perseverance, continuity, and swift recovery of digital education services for the Eastern Cape Department of Education. It addresses the growing reliance on digital platforms to support inclusive, low-bandwidth learning in under-resourced rural communities.
+        </p>
+        
+        <div class="card-grid">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-header">
+              <i class="fas fa-plug"></i> Business Continuity Integration
+            </div>
+            <div class="card-body">
+              <ul>
+                <li><strong>Offline-first architecture</strong> with local data storage for load shedding periods</li>
+                <li><strong>Edge computing devices</strong> (solar-powered servers) for power outages</li>
+                <li><strong>Mesh networks</strong> and community hotspots for backup connectivity</li>
+                <li><strong>Encrypted cloud storage</strong> with local data duplication</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-header">
+              <i class="fas fa-shield-alt"></i> Disaster Recovery Components
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>Community centers equipped with backup routers and solar chargers</li>
+                <li>Redundant learning channels (mobile apps, USB/SD cards)</li>
+                <li>SMS-based downtime notifications</li>
+                <li>Pre-loaded offline resource packs</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-header">
+              <i class="fas fa-users"></i> Community Preparedness
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>Teacher training for offline mode transitions</li>
+                <li>Technician protocols for service restoration</li>
+                <li>Student guidance for offline work preservation</li>
+                <li>Community feedback loops for continuous improvement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="key-objectives">
+          <h3>Primary Objectives</h3>
+          <div class="objective-grid">
+            <div class="objective-item">
+              <i class="fas fa-bolt"></i>
+              <p>Reduce impact of load shedding and infrastructure failures</p>
+            </div>
+            <div class="objective-item">
+              <i class="fas fa-clock"></i>
+              <p>Ensure swift recovery of critical education services</p>
+            </div>
+            <div class="objective-item">
+              <i class="fas fa-lock"></i>
+              <p>Maintain data protection and operational compliance</p>
+            </div>
+            <div class="objective-item">
+              <i class="fas fa-sync-alt"></i>
+              <p>Regular testing through simulation exercises</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; text-align: center;">
+          <a href="https://docs.google.com/document/d/1nQaibBCx5NLjiMpEzh8xhycerOxHbFsQ/edit?usp=sharing&ouid=105622552928212557626&rtpof=true&sd=true" class="btn" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-alt"></i> View Full Executive Summary Document
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Risk Assessment -->
+    <section id="risk-assessment" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <h2 class="section-title">Risk Assessment & Threat Identification</h2>
+      </div>
+      <div class="section-content">
+        <div class="tabs" role="tablist" aria-label="Risk Assessment Tabs">
+          <div class="tab active" data-tab="risk-map" role="tab" tabindex="0" aria-selected="true" aria-controls="risk-map" id="tab-risk-map">Risk Map</div>
+          <div class="tab" data-tab="threats" role="tab" tabindex="-1" aria-selected="false" aria-controls="threats" id="tab-threats">Threat Identification</div>
+          <div class="tab" data-tab="scenarios" role="tab" tabindex="-1" aria-selected="false" aria-controls="scenarios" id="tab-scenarios">Scenarios</div>
+        </div>
+        <div class="tab-content active" id="risk-map" role="tabpanel" aria-labelledby="tab-risk-map">
+          <h3>Risk Assessment Matrix</h3>
+          <p>This matrix evaluates potential risks based on their likelihood and impact on our digital education platform.</p>
+          <div class="risk-matrix" aria-label="Risk Assessment Matrix">
+            <div class="matrix-cell matrix-header">Likelihood/Impact</div>
+            <div class="matrix-cell matrix-header">Rare</div>
+            <div class="matrix-cell matrix-header">Unlikely</div>
+            <div class="matrix-cell matrix-header">Possible</div>
+            <div class="matrix-cell matrix-header">Likely</div>
+            <div class="matrix-cell matrix-header">Almost Certain</div>
+
+            <div class="matrix-cell matrix-header">Severe</div>
+            <div class="matrix-cell risk-medium">Natural Disasters</div>
+            <div class="matrix-cell risk-high">Load Shedding</div>
+            <div class="matrix-cell risk-critical">Theft & Vandalism</div>
+            <div class="matrix-cell risk-critical"></div>
+            <div class="matrix-cell risk-critical"></div>
+
+            <div class="matrix-cell matrix-header">High</div>
+            <div class="matrix-cell risk-medium"></div>
+            <div class="matrix-cell risk-high">USB Malware</div>
+            <div class="matrix-cell risk-high">Internet Loss</div>
+            <div class="matrix-cell risk-high"></div>
+            <div class="matrix-cell risk-high"></div>
+
+            <div class="matrix-cell matrix-header">Moderate</div>
+            <div class="matrix-cell risk-low"></div>
+            <div class="matrix-cell risk-medium"></div>
+            <div class="matrix-cell risk-medium"></div>
+            <div class="matrix-cell risk-medium"></div>
+            <div class="matrix-cell risk-medium"></div>
+
+            <div class="matrix-cell matrix-header">Low</div>
+            <div class="matrix-cell risk-low"></div>
+            <div class="matrix-cell risk-low"></div>
+            <div class="matrix-cell risk-low"></div>
+            <div class="matrix-cell risk-low"></div>
+            <div class="matrix-cell risk-low"></div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="https://docs.google.com/document/d/1wwmuSZ0crPK2Qy6qM8TJDigH_705tdOz/edit?usp=sharing&ouid=105622552928212557626&rtpof=true&sd=true" class="btn" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-chart-bar"></i> View Risk Assessment Document
+            </a>
+          </div>
+        </div>
+        <div class="tab-content" id="threats" role="tabpanel" aria-labelledby="tab-threats" tabindex="0">
+          <h3>Threat Identification</h3>
+          <p>Potential threats to our digital education platform and mitigation strategies:</p>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header">Load Shedding</div>
+              <div class="card-body">
+                <p><strong>Description:</strong> Frequent national power outages disrupting learning and causing data loss.</p>
+                <p><strong>Mitigation:</strong> Secondary generators, UPS solutions, and paper-based backups.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Internet Connectivity</div>
+              <div class="card-body">
+                <p><strong>Description:</strong> Unreliable internet access in rural areas, hindering real-time learning.</p>
+                <p><strong>Mitigation:</strong> Offline content syncing, mobile data alternatives, and local caching.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Theft & Vandalism</div>
+              <div class="card-body">
+                <p><strong>Description:</strong> High risk of theft or damage to ICT and solar infrastructure.</p>
+                <p><strong>Mitigation:</strong> Secure storage, asset tracking, and community-led security collaborations.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Malware Infections</div>
+              <div class="card-body">
+                <p><strong>Description:</strong> Malware spread via infected USB drives, compromising systems.</p>
+                <p><strong>Mitigation:</strong> Strict USB policies, offline antivirus tools, and regular staff training.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="scenarios" role="tabpanel" aria-labelledby="tab-scenarios" tabindex="0">
+          <h3>Disaster Scenarios</h3>
+          <p>Potential disaster scenarios and our response plans:</p>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header">Power Outage During Critical Learning</div>
+              <div class="card-body">
+                <p><strong>Scenario:</strong> Total power loss during digital assessments due to load shedding.</p>
+                <p><strong>Response:</strong> Deploy printed emergency packs; upgrade energy systems with redundancy.</p>
+                <p><strong>RTO:</strong> 6–12 hours (initial); 3–5 days (full recovery).</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Malware Infection via USB</div>
+              <div class="card-body">
+                <p><strong>Scenario:</strong> System shutdowns and data corruption from infected USB drives.</p>
+                <p><strong>Response:</strong> Isolate devices, restore from backups, and enforce USB policies.</p>
+                <p><strong>RTO:</strong> 1–2 days (basic); 5 days (full cleansing).</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Theft of Learning Assets</div>
+              <div class="card-body">
+                <p><strong>Scenario:</strong> Stolen ICT devices and solar components impacting operations.</p>
+                <p><strong>Response:</strong> Report to authorities, use shared devices, and invest in secure storage.</p>
+                <p><strong>RTO:</strong> 2–3 days (interim); 2–4 weeks (replacement).</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Flood Damage to Solar Infrastructure</div>
+              <div class="card-body">
+                <p><strong>Scenario:</strong> Flash floods damaging solar panels and inverters.</p>
+                <p><strong>Response:</strong> Relocate learners, use temporary power, and retrofit flood protections.</p>
+                <p><strong>RTO:</strong> 1–2 days (interim); 2–3 weeks (restoration).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Recovery Objectives -->
+    <section id="recovery-objectives" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <h2 class="section-title">Recovery Time and Point Objectives</h2>
+      </div>
+      <div class="section-content">
+        <p>
+          Our recovery objectives define the target timelines and priorities to restore critical digital education services for the Eastern Cape Department of Education's Digital Learning Environment after disruption.
+        </p>
+        
+        <div class="card-grid">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-header">Recovery Time Objective (RTO)</div>
+            <div class="card-body">
+              <p>
+                Maximum acceptable time to restore systems after disruption:
+              </p>
+              <ul>
+                <li><strong>Critical (Tier 1):</strong> 4 hours - LMS, SIS, Authentication</li>
+                <li><strong>Important (Tier 2):</strong> 8 hours - Content Repositories, Assessment</li>
+                <li><strong>Standard (Tier 3):</strong> 24 hours - Admin Systems, Reporting</li>
+                <li><strong>Non-critical (Tier 4):</strong> 72 hours - Auxiliary Services</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-header">Recovery Point Objective (RPO)</div>
+            <div class="card-body">
+              <p>
+                Maximum acceptable amount of data loss measured in time:
+              </p>
+              <ul>
+                <li><strong>Critical Data:</strong> 30 minutes - Student Records, Assessments</li>
+                <li><strong>Important Data:</strong> 2 hours - Learning Content, Communications</li>
+                <li><strong>Standard Data:</strong> 12 hours - Administrative Records</li>
+                <li><strong>Archive Data:</strong> 24 hours - Historical Information</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-header">Priority Systems</div>
+            <div class="card-body">
+              <ul>
+                <li>Learning Management System (LMS) - Course content delivery, assessments, tracking</li>
+                <li>Student Information System (SIS) - Registration, records management, grading</li>
+                <li>Communication Tools - Live classes, admin coordination, learner support</li>
+                <li>Content Repositories - Access to textbooks, research materials, OERs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-grid" style="margin-top: 1.5rem;">
+          <div class="card" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-header">Implementation Strategy</div>
+            <div class="card-body">
+              <ul>
+                <li>Automated monitoring and alerting systems to detect disruptions</li>
+                <li>Regular testing of recovery procedures to ensure RTO compliance</li>
+                <li>Frequent data synchronization to meet stringent RPO requirements</li>
+                <li>Distributed backup systems to minimize data loss risk</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+
+
+    <!-- Business Impact Analysis -->
+    <section id="business-impact" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <h2 class="section-title">Business Impact Analysis (BIA)</h2>
+      </div>
+      <div class="section-content">
+        <p>
+          The BIA evaluates the effects of disruption on Eastern Cape's digital education ecosystem, quantifying impacts across key functions, stakeholders, and financial implications.
+        </p>
+        
+        <div class="tabs" role="tablist" aria-label="BIA Tabs">
+          <div class="tab active" data-tab="critical-functions" role="tab" tabindex="0" aria-selected="true" aria-controls="critical-functions" id="tab-critical-functions">Critical Functions</div>
+          <div class="tab" data-tab="financial-impact" role="tab" tabindex="-1" aria-selected="false" aria-controls="financial-impact" id="tab-financial-impact">Financial Impact</div>
+          <div class="tab" data-tab="stakeholders" role="tab" tabindex="-1" aria-selected="false" aria-controls="stakeholders" id="tab-stakeholders">Stakeholders</div>
+        </div>
+        
+        <div class="tab-content active" id="critical-functions" role="tabpanel" aria-labelledby="tab-critical-functions">
+          <h3>Key Digital Education Functions & Recovery Metrics</h3>
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered" aria-describedby="bia-functions-description">
+              <caption id="bia-functions-description" class="visually-hidden">
+                Business Impact Analysis table listing critical functions, impact of disruption, recovery time objectives, and recovery point objectives
+              </caption>
+              <thead class="table-primary">
+                <tr>
+                  <th scope="col">Function</th>
+                  <th scope="col">Impact of Disruption</th>
+                  <th scope="col">RTO</th>
+                  <th scope="col">RPO</th>
+                  <th scope="col">Priority</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Learning Management System</td>
+                  <td>Students unable to submit work or access materials; teachers cannot provide feedback</td>
+                  <td>4-12 hours</td>
+                  <td>4-6 hours</td>
+                  <td><span class="badge bg-danger">Critical</span></td>
+                </tr>
+                <tr>
+                  <td>Student Information Systems</td>
+                  <td>Inability to process marks, register learners, or submit regulatory reports</td>
+                  <td>24 hours</td>
+                  <td>24 hours</td>
+                  <td><span class="badge bg-danger">Critical</span></td>
+                </tr>
+                <tr>
+                  <td>Communication Platforms</td>
+                  <td>Isolation of rural students, missed classes, coordination breakdown</td>
+                  <td>≤2 hours</td>
+                  <td>12 hours</td>
+                  <td><span class="badge bg-warning text-dark">High</span></td>
+                </tr>
+                <tr>
+                  <td>Assessment Systems</td>
+                  <td>Exam cancellations, data loss, progression delays</td>
+                  <td>12-24 hours</td>
+                  <td>1 hour</td>
+                  <td><span class="badge bg-danger">Critical</span></td>
+                </tr>
+                <tr>
+                  <td>Technical Support</td>
+                  <td>Unresolved technical barriers escalate into systemic issues</td>
+                  <td>4-8 hours</td>
+                  <td>N/A</td>
+                  <td><span class="badge bg-warning text-dark">High</span></td>
+                </tr>
+                <tr>
+                  <td>Administrative Functions</td>
+                  <td>Delays in reporting, procurement, and compliance</td>
+                  <td>48-72 hours</td>
+                  <td>24 hours</td>
+                  <td><span class="badge bg-primary">Medium</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="card mt-4">
+            <div class="card-header bg-info text-white">
+              <i class="fas fa-exclamation-triangle me-2"></i> Key Risks Identified
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="risk-list">
+                    <li><span class="risk-icon"><i class="fas fa-bolt"></i></span> Load shedding/power outages</li>
+                    <li><span class="risk-icon"><i class="fas fa-cloud-showers-heavy"></i></span> Severe weather events</li>
+                    <li><span class="risk-icon"><i class="fas fa-wifi-slash"></i></span> Connectivity failures</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="risk-list">
+                    <li><span class="risk-icon"><i class="fas fa-lock"></i></span> Cybersecurity threats</li>
+                    <li><span class="risk-icon"><i class="fas fa-users-slash"></i></span> Political unrest</li>
+                    <li><span class="risk-icon"><i class="fas fa-gem"></i></span> Theft of ICT infrastructure</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-content" id="financial-impact" role="tabpanel" aria-labelledby="tab-financial-impact" tabindex="0">
+          <h3>Financial Impact Analysis</h3>
+          <p>Estimated costs for a medium-sized rural school (300-500 learners):</p>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                  <i class="fas fa-clock me-2"></i> Instructional Time Loss
+                </div>
+                <div class="card-body">
+                  <div class="impact-metric">
+                    <div class="metric-value">R36,000 - R60,000</div>
+                    <div class="metric-label">Per 2-day LMS outage</div>
+                  </div>
+                  <p class="mt-2"><small>Based on R40-R100 per learner/day depending on delivery mode</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                  <i class="fas fa-tools me-2"></i> System Recovery Costs
+                </div>
+                <div class="card-body">
+                  <div class="impact-metric">
+                    <div class="metric-value">R5,000 - R100,000+</div>
+                    <div class="metric-label">Depending on severity</div>
+                  </div>
+                  <ul class="mt-2">
+                    <li><small>Minor: R500-R2,000</small></li>
+                    <li><small>Major: R30,000-R100,000+</small></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <i class="fas fa-chart-line me-2"></i> Consolidated Impact (Per Incident)
+            </div>
+            <div class="card-body">
+              <div class="impact-visualization">
+                <div class="impact-bar" style="width: 100%; background: linear-gradient(90deg, #e63946 0%, #f4a261 50%, #2a9d8f 100%);">
+                  <div class="impact-segment" style="width: 30%;">
+                    <div class="segment-label">Instructional Loss</div>
+                    <div class="segment-value">R36k-R60k</div>
+                  </div>
+                  <div class="impact-segment" style="width: 25%;">
+                    <div class="segment-label">System Recovery</div>
+                    <div class="segment-value">R10k-R25k</div>
+                  </div>
+                  <div class="impact-segment" style="width: 20%;">
+                    <div class="segment-label">Educator Downtime</div>
+                    <div class="segment-value">R7k-R12.5k</div>
+                  </div>
+                  <div class="impact-segment" style="width: 25%;">
+                    <div class="segment-label">Reputation Damage</div>
+                    <div class="segment-value">R30k-R100k+</div>
+                  </div>
+                </div>
+                <div class="impact-total mt-3">
+                  Total Potential Impact: <strong>R83,000 - R197,500+</strong> per school-level incident
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-content" id="stakeholders" role="tabpanel" aria-labelledby="tab-stakeholders" tabindex="0">
+          <h3>Key Stakeholders & Impact Groups</h3>
+          <div class="stakeholder-grid">
+            <div class="stakeholder-card">
+              <div class="stakeholder-icon bg-danger">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <h4>Learners</h4>
+              <ul>
+                <li>Access to learning stops during outages</li>
+                <li>Rural learners disproportionately affected</li>
+                <li>Special needs students face additional barriers</li>
+              </ul>
+            </div>
+            <div class="stakeholder-card">
+              <div class="stakeholder-icon bg-warning">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <h4>Educators</h4>
+              <ul>
+                <li>Unable to deliver lessons or track progress</li>
+                <li>Increased stress from tech troubleshooting</li>
+                <li>Often use personal devices/data</li>
+              </ul>
+            </div>
+            <div class="stakeholder-card">
+              <div class="stakeholder-icon bg-info">
+                <i class="fas fa-school"></i>
+              </div>
+              <h4>Administrators</h4>
+              <ul>
+                <li>Registration and reporting blocked</li>
+                <li>Procurement delays</li>
+                <li>Compliance risks</li>
+              </ul>
+            </div>
+            <div class="stakeholder-card">
+              <div class="stakeholder-icon bg-success">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4>Parents/Caregivers</h4>
+              <ul>
+                <li>Struggle to support learning during outages</li>
+                <li>May lose confidence in digital systems</li>
+                <li>Rural households particularly affected</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <a href="https://docs.google.com/document/d/1FbRgOTnIZNZVR3QQcFUuOJ7_Sy-jyOKC/edit?usp=drive_link&ouid=105622552928212557626&rtpof=true&sd=true" class="btn" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-chart-bar"></i> View BIA Document
+            </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Disaster Recovery -->
+    <section id="disaster-recovery" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <h2 class="section-title">Disaster Recovery Plan</h2>
+      </div>
+      <div class="section-content">
+        <p>
+          This Disaster Recovery Plan outlines the strategies and procedures for restoring critical digital education services in the Eastern Cape in the event of a disaster or major disruption. It aims to minimize downtime, protect data integrity, and ensure continuity of learning and administrative operations.
+        </p>
+        
+        <div class="card-grid">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-header">Critical Systems & Impact</div>
+            <div class="card-body">
+              <ul>
+                <li>Learning Management System (LMS) - Course delivery, assessments, tracking</li>
+                <li>Student Information System (SIS) - Registration, records, grading</li>
+                <li>Communication Tools - Live classes, coordination, support</li>
+                <li>Content Repositories - Digital textbooks, OERs, research</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-header">Disaster Mitigation</div>
+            <div class="card-body">
+              <ul>
+                <li>Load Shedding: Solar power, offline LMS modules</li>
+                <li>Connectivity Failures: Hybrid packages, satellite internet</li>
+                <li>Cybersecurity: Regular backups, 2FA for admins</li>
+                <li>Physical Threats: Tamper-proof equipment, device tracking</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-header">Backup & Recovery</div>
+            <div class="card-body">
+              <ul>
+                <li>Cloud-Based Backup with encrypted, automated systems</li>
+                <li>Offline LMS Content synced weekly to USBs/DVDs</li>
+                <li>Redundant servers in other provinces</li>
+                <li>Preloaded student devices with term content</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-header">Communication Plan</div>
+            <div class="card-body">
+              <ul>
+                <li>Crisis Alerts via SMS, WhatsApp, and local radio stations</li>
+                <li>Instructional Updates on LMS banners and emails</li>
+                <li>24/7 Helpdesk support during crisis periods</li>
+                <li>Regular status updates to all stakeholders</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-grid" style="margin-top: 1.5rem;">
+          <div class="card" data-aos="fade-up" data-aos-delay="500">
+            <div class="card-header">Roles & Responsibilities</div>
+            <div class="card-body">
+              <ul>
+                <li>Provincial ICT Manager: System recovery coordination</li>
+                <li>School ICT Coordinators: First-line troubleshooting</li>
+                <li>Educators: Utilize offline materials during disruptions</li>
+                <li>Helpdesk Teams: Triage and resolve technical issues</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="600">
+            <div class="card-header">Testing & Review</div>
+            <div class="card-body">
+              <ul>
+                <li>Biannual disaster recovery simulations</li>
+                <li>Monthly backup verification and restoration tests</li>
+                <li>Annual plan review and threat assessment</li>
+                <li>Continuous improvement based on incident feedback</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Document Viewing Option -->
+        <div style="margin-top: 2rem;">
+          <a href="https://docs.google.com/document/d/1DskKGq4re8SuSvZ4h43N8Ta2KEpFK4Ub/edit?usp=sharing&ouid=105622552928212557626&rtpof=true&sd=true" class="btn" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-alt"></i> View Disaster Recovery Document
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Business Continuity & Integration -->
+    <section id="business-continuity" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <h2 class="section-title">Business Continuity & Integration</h2>
+      </div>
+      <div class="section-content">
+        <div class="tabs" role="tablist" aria-label="Continuity Tabs">
+          <div class="tab active" data-tab="ea-integration" role="tab" tabindex="0" aria-selected="true" aria-controls="ea-integration" id="tab-ea-integration">Enterprise Integration</div>
+          <div class="tab" data-tab="components" role="tab" tabindex="-1" aria-selected="false" aria-controls="components" id="tab-components">Key Components</div>
+          <div class="tab" data-tab="training" role="tab" tabindex="-1" aria-selected="false" aria-controls="training" id="tab-training">Community Training</div>
+        </div>
+
+        <!-- Enterprise Architecture Integration -->
+        <div class="tab-content active" id="ea-integration" role="tabpanel" aria-labelledby="tab-ea-integration">
+          <h3>Integration with Enterprise Architecture</h3>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header">Capability Layer</div>
+              <div class="card-body">
+                <p>Offline access and local data storage ensure platform functionality during disruptions like load shedding.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Data Architecture</div>
+              <div class="card-body">
+                <p>Data is duplicated locally and backed up to encrypted cloud storage for redundancy.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Technology Architecture</div>
+              <div class="card-body">
+                <p>Solar-powered local servers and mesh networks enable learning during outages. Community hotspots extend access.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Application Architecture</div>
+              <div class="card-body">
+                <p>Offline-first design allows lessons, materials, and assessments to function without constant internet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Components -->
+        <div class="tab-content" id="components" role="tabpanel" aria-labelledby="tab-components" tabindex="0">
+          <h3>Critical Continuity Components</h3>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header">Disaster Recovery Protocols</div>
+              <div class="card-body">
+                <p>Community centers are equipped with backup routers, solar chargers, and offline resource packs, supported by trained technicians.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Redundant Learning Channels</div>
+              <div class="card-body">
+                <p>Students access materials via mobile apps, community hubs, and pre-loaded USB/SD cards to ensure uninterrupted learning.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Local Alerts and Support</div>
+              <div class="card-body">
+                <p>SMS notifications inform users of system downtimes and alternative access methods.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Community Training -->
+        <div class="tab-content" id="training" role="tabpanel" aria-labelledby="tab-training" tabindex="0">
+          <h3>Community Training & Preparedness</h3>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header">Teacher Training</div>
+              <div class="card-body">
+                <p>Teachers learn to switch to offline modes and guide learners during disruptions.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Technician Protocols</div>
+              <div class="card-body">
+                <p>Local technicians are trained to restore services and retrieve backup data.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Student Guidance</div>
+              <div class="card-body">
+                <p>Students are taught to save work offline and use alternative access channels.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Testing & Improvement</div>
+              <div class="card-body">
+                <p>Regular simulations test backup systems, while community feedback refines protocols.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Document Viewing Option -->
+        <div style="margin-top: 2rem;">
+          <a href="https://docs.google.com/document/d/1LM1TlFMe9PmgS1Ay8ocQQWk7YOVXreBX/edit?usp=sharing&ouid=105622552928212557626&rtpof=true&sd=true" class="btn" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-alt"></i> View Business Continuity Document Online
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Test & Maintenance -->
+    <section id="test-maintenance" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <h2 class="section-title">Test & Maintenance</h2>
+      </div>
+      
+      <div class="section-content">
+        <div class="intro-box">
+          <p>
+            Our comprehensive testing and maintenance program ensures the Business Continuity and Disaster Recovery (BC/DR) plan remains effective against Eastern Cape-specific threats including load shedding, connectivity failures, and infrastructure theft.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-header">Testing Schedule</div>
+            <div class="card-body">
+              <ul>
+                <li><strong>Biannual DR Simulations</strong>: Full system failure scenarios including power outages and cyber attacks</li>
+                <li><strong>Monthly Backup Audits</strong>: Verify RPO adherence with test restorations from cloud and local backups</li>
+                <li><strong>Quarterly Connectivity Tests</strong>: Evaluate fallback systems (SMS alerts, mesh networks, offline content)</li>
+                <li><strong>Annual Flood/Disaster Drills</strong>: Test physical recovery of solar infrastructure and device replacement protocols</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-header">Maintenance Activities</div>
+            <div class="card-body">
+              <ul>
+                <li><strong>Weekly System Checks</strong>: Monitor solar UPS systems and edge computing devices</li>
+                <li><strong>Bi-monthly Security Updates</strong>: Patch LMS/SIS systems and implement USB malware protections</li>
+                <li><strong>Offline Content Refresh</strong>: Quarterly updates to USB/SD card resource packs for rural schools</li>
+                <li><strong>Community Hub Inspections</strong>: Monthly verification of backup routers and local storage at community centers</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-header">Continuous Improvement</div>
+            <div class="card-body">
+              <ul>
+                <li><strong>Post-Disaster Reviews</strong>: Analyze recovery performance against RTO/RPO targets after each incident</li>
+                <li><strong>Community Feedback Loops</strong>: Incorporate teacher/technician input into protocol updates</li>
+                <li><strong>Annual Threat Assessment</strong>: Update risk matrix based on new vulnerabilities (e.g., increased load shedding stages)</li>
+                <li><strong>Training Reinforcement</strong>: Biannual workshops for teachers on offline modes and technicians on recovery procedures</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </div>
+
+  <!-- Vendor JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
+
+
